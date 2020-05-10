@@ -1,5 +1,5 @@
 {
-  "name": "@lucasvallenet/scrollevents",
+  "name": "@lucasvallenet/js-scrollevents",
   "version": "1.0.0",
   "description": "Add custom scroll events to window",
   "main": "index.js",
