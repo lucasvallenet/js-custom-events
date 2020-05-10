@@ -1,6 +1,6 @@
 # @lucasvallenet/js-scrollevents
 
-![npm](https://img.shields.io/npm/v/@lucasvallenet/scrollevents?style=flat-square)
+![npm](https://img.shields.io/npm/v/@lucasvallenet/js-scrollevents?style=flat-square)
 
 Add custom scroll events to window
 
