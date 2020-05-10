@@ -3,7 +3,7 @@
  * @return {void}
  */
 
-export const scrollStart = () => {
+export const scrollstart = () => {
     let scrollTimer = null;
     const scrollstart = new CustomEvent('scrollstart');
 
@@ -29,7 +29,7 @@ export const scrollStart = () => {
  * @return {void}
  */
 
-export const scrollEnd = () => {
+export const scrollend = () => {
     let scrollTimer = null;
     const scrollend = new CustomEvent('scrollend');
 
@@ -54,7 +54,7 @@ export const scrollEnd = () => {
  * @return {void}
  */
 
-export const scrollUp = () => {
+export const scrollup = () => {
     let scrollY = window.scrollY;
     let previousScrollY = scrollY;
     let direction = 0;
@@ -83,7 +83,7 @@ export const scrollUp = () => {
  * @return {void}
  */
 
-export const scrollDown = () => {
+export const scrolldown = () => {
     let scrollY = window.scrollY;
     let previousScrollY = scrollY;
     let direction = 0;
