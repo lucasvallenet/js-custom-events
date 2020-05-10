@@ -1,18 +1,27 @@
-# scrollevents
+# Scroll events
 Add custom scroll events to window
 
+## Installation
+
+``
+yarn add @lucasvallenet/scrollevents
+``
+
+``
+npm i @lucasvallenet/scrollevents
+``
 
 ## Usage
 
 ```js
 // Import event
-import { scrollStart } from 'scrollevents'
+import { scrollstart } from 'scrollevents'
 
 // Execute function
-scrollStart()
+scrollstart()
 
 // Add callback
-window.addEventListener('scrollstart', => console.log('scrollstart'))
+window.addEventListener('scrollstart', () => console.log('scrollstart'))
 ```
 
 ## Available events
