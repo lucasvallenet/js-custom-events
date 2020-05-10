@@ -1,4 +1,7 @@
-# Scroll events
+# @lucasvallenet/scrollevents
+
+![npm](https://img.shields.io/npm/v/@lucasvallenet/scrollevents?style=flat-square)
+
 Add custom scroll events to window
 
 ## Installation
