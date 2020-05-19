@@ -3,8 +3,8 @@
  * @return {boolean}
  */
 
-isElement(element) {
-    return isElement = element === window || element instanceof Element || element instanceof HTMLDocument
+function isElement(element) {
+    return element === window || element instanceof Element || element instanceof HTMLDocument
 }
 
 
