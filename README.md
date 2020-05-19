@@ -1,24 +1,24 @@
-# @lucasvallenet/js-scrollevents
+# @lucasvallenet/js-custom-events
 
-![npm](https://img.shields.io/npm/v/@lucasvallenet/js-scrollevents?style=flat-square)
+![npm](https://img.shields.io/npm/v/@lucasvallenet/js-custom-events?style=flat-square)
 
-Add custom scroll events to window
+Add custom events to window
 
 ## Installation
 
 ``
-yarn add @lucasvallenet/js-scrollevents
+yarn add @lucasvallenet/js-custom-events
 ``
 
 ``
-npm i @lucasvallenet/js-scrollevents
+npm i @lucasvallenet/js-custom-events
 ``
 
 ## Usage
 
 ```js
 // Import event
-import { scrollstart } from '@lucasvallenet/js-scrollevents'
+import { scrollstart } from '@lucasvallenet/js-custom-events'
 
 // Execute function
 scrollstart()
@@ -29,8 +29,11 @@ window.addEventListener('scrollstart', () => console.log('scrollstart'))
 
 ## Available events
 
-##### Triggers
+##### Scroll triggers
 `scrollstart` | `scrollend` 
 
-##### Directions
+##### Scroll directions Y
 `scrollup` | `scrolldown`
+
+##### Mouse move
+`movestart` | `moveend` 

@@ -1,17 +1,19 @@
 {
-  "name": "@lucasvallenet/js-scrollevents",
-  "version": "1.0.1",
-  "description": "Add custom scroll events to window",
+  "name": "@lucasvallenet/js-custom-events",
+  "version": "1.0.0",
+  "description": "Add custom events to window",
   "main": "index.js",
   "repository": {
-    "url": "git@github.com:lucasvallenet/js-scrollevents.git",
+    "url": "git@github.com:lucasvallenet/js-custom-events.git",
     "type": "git"
   },
   "author": "Lucas Vallenet (http://www.lucasvallenet.com)",
   "license": "Beerware",
   "keywords": [
-    "scroll",
+    "custom",
     "events",
+    "scroll",
+    "mousemove",
     "npm",
     "package",
     "lucasvallenet"
