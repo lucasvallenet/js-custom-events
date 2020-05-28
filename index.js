@@ -1,10 +1,30 @@
 /**
- * Check if element if Window or DOM element
+ * Check if element is Window
+ * @return {boolean}
+ */
+
+function isWindow(element) {
+    return element === window
+}
+
+
+/**
+ * Check if element is a DOM element
  * @return {boolean}
  */
 
 function isElement(element) {
-    return element === window || element instanceof Element || element instanceof HTMLDocument
+    return element instanceof Element || element instanceof HTMLDocument
+}
+
+
+/**
+ * Check if element is Window or DOM element
+ * @return {boolean}
+ */
+
+function isValid(element) {
+    return isWindow(element) || isElement(element)
 }
 
 
@@ -14,9 +34,9 @@ function isElement(element) {
  */
 
 export const scrollstart = (element=window) => {
-    
+
     // Check element
-    if(!isElement(element)) {
+    if(!isValid(element)) {
         return false
     }
 
@@ -46,9 +66,9 @@ export const scrollstart = (element=window) => {
  */
 
 export const scrollend = (element=window) => {
-    
+
     // Check element
-    if(!isElement(element)) {
+    if(!isValid(element)) {
         return false
     }
 
@@ -77,9 +97,9 @@ export const scrollend = (element=window) => {
  */
 
 export const scrollup = (element=window) => {
-    
+
     // Check element
-    if(!isElement(element)) {
+    if(!isValid(element)) {
         return false
     }
 
@@ -87,10 +107,11 @@ export const scrollup = (element=window) => {
     let previousScrollTop = scrollTop;
     let direction = 0;
     const scrollup = new CustomEvent('scrollup');
+    const scrollEvent = isWindow(element) ? 'scrollY' : 'scrollTop'
 
     element.addEventListener('scroll', (e) => {
-        scrollTop = element.scrollTop
-        
+        scrollTop = element[scrollEvent]
+
         // Scroll up
         if (scrollTop < previousScrollTop && direction > -1) {
             element.dispatchEvent(scrollup);
@@ -112,9 +133,9 @@ export const scrollup = (element=window) => {
  */
 
 export const scrolldown = (element=window) => {
-    
+
     // Check element
-    if(!isElement(element)) {
+    if(!isValid(element)) {
         return false
     }
 
@@ -122,14 +143,15 @@ export const scrolldown = (element=window) => {
     let previousScrollTop = scrollTop;
     let direction = 0;
     const scrolldown = new CustomEvent('scrolldown');
+    const scrollEvent = isWindow(element) ? 'scrollY' : 'scrollTop'
 
     element.addEventListener('scroll', (e) => {
-        scrollTop = element.scrollTop
-        
+        scrollTop = element[scrollEvent]
+
         // Scroll up
         if (scrollTop < previousScrollTop && direction > -1) {
             direction = -1
-        
+
         // Scroll down
         } else if(scrollTop > previousScrollTop && direction < 1) {
             element.dispatchEvent(scrolldown);
@@ -147,9 +169,9 @@ export const scrolldown = (element=window) => {
  */
 
 export const movestart = (element=window) => {
-    
+
     // Check element
-    if(!isElement(element)) {
+    if(!isValid(element)) {
         return false
     }
 
@@ -179,9 +201,9 @@ export const movestart = (element=window) => {
  */
 
 export const moveend = (element=window) => {
-    
+
     // Check element
-    if(!isElement(element)) {
+    if(!isValid(element)) {
         return false
     }
 
